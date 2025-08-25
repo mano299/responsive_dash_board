@@ -12,6 +12,36 @@ class AllExpensesHeader extends StatelessWidget {
           'AllExpenses',
           style: AppStyles.styleSemiBold20,
         ),
+        Spacer(),
+        Container(
+          padding: EdgeInsets.all(20),
+          decoration: ShapeDecoration(
+            color: Colors.white,
+            shape: RoundedRectangleBorder(
+              side: BorderSide(
+                width: 1,
+                color: Color(0xffF1F1F1),
+              ),
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          child: Row(
+            children: [
+              Text(
+                'Monthly',
+                style: AppStyles.styleMedium16,
+              ),
+              SizedBox(width: 18),
+              Transform.rotate(
+                angle: -1.5708,
+                child: Icon(
+                  Icons.arrow_back_ios_new_outlined,
+                  color: Color(0xff064061),
+                ),
+              )
+            ],
+          ),
+        )
       ],
     );
   }

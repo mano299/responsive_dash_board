@@ -6,17 +6,16 @@ class AllExpenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40.0),
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-        ),
-        child: Column(
-          children: [
-            AllExpensesHeader()
-          ],
-        ),
+    return Container(
+      padding: EdgeInsets.all(20),
+      decoration: ShapeDecoration(
+        shape: RoundedRectangleBorder(),
+        color: Colors.white,
+      ),
+      child: Column(
+        children: [
+          AllExpensesHeader()
+        ],
       ),
     );
   }
