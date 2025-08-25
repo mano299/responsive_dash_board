@@ -23,9 +23,7 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
   int selectedItem = 0;
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+    return SliverList.builder(
       itemCount: drawerItems.length,
       itemBuilder: (context, index) {
         return Padding(

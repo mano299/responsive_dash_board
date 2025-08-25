@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dash_board/models/drawer_item_model.dart';
@@ -24,7 +23,6 @@ class InActiveDrawerItem extends StatelessWidget {
   }
 }
 
-
 class ActiveDrawerItem extends StatelessWidget {
   const ActiveDrawerItem({
     super.key,
@@ -39,7 +37,14 @@ class ActiveDrawerItem extends StatelessWidget {
       leading: SvgPicture.asset(drawerItemModel.icon),
       title: Text(
         drawerItemModel.title,
-        style: AppStyles.styleSemiBold16,
+        style: AppStyles.styleBold16,
+      ),
+      trailing: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: Color(0xff4EB7F2),
+        ),
+        width: 3.27,
       ),
     );
   }
