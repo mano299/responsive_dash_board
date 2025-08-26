@@ -15,10 +15,13 @@ class CustomDrawer extends StatelessWidget {
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child: UserInfoListTile(
-              image: Assets.imagesAvatar,
-              title: 'Lekan Okeowo',
-              subTitle: 'demo@gmail.com',
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: UserInfoListTile(
+                image: Assets.imagesAvatar,
+                title: 'Lekan Okeowo',
+                subTitle: 'demo@gmail.com',
+              ),
             ),
           ),
           SliverToBoxAdapter(child: SizedBox(height: 8)),
