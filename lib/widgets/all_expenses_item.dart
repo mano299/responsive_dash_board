@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
+import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class AllExpensesItem extends StatelessWidget {
   const AllExpensesItem({super.key});
@@ -29,7 +30,20 @@ class AllExpensesItem extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          ),
+          SizedBox(height: 34),
+          Text(
+            'Balance',
+            style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
+          ),
+          Text(
+            'April 2022',
+            style: AppStyles.styleRegular14.copyWith(color: Color(0xffFAFAFA)),
+          ),
+          Text(
+            '\$20,129',
+            style: AppStyles.styleSemiBold24,
+          ),
         ],
       ),
     );
