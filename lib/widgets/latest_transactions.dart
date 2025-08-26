@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
+import 'package:responsive_dash_board/widgets/latest_transactions_list_view.dart';
 
 class LatestTransactions extends StatelessWidget {
   const LatestTransactions({super.key});
@@ -13,7 +14,7 @@ class LatestTransactions extends StatelessWidget {
           style: AppStyles.styleMedium16,
         ),
         SizedBox(height: 12),
-
+        LatestTransactionsListView(),
       ],
     );
   }
