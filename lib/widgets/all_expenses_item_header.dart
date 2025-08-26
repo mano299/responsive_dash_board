@@ -4,9 +4,9 @@ import 'package:responsive_dash_board/utils/app_images.dart';
 
 class AllExpensesItemHeader extends StatelessWidget {
   const AllExpensesItemHeader({
-    super.key,
+    super.key, required this.image,
   });
-
+  final String image;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -14,11 +14,12 @@ class AllExpensesItemHeader extends StatelessWidget {
         CircleAvatar(
           backgroundColor: Color(0xffFAFAFA),
           child: SvgPicture.asset(
-            Assets.imagesIncome,
+            image,
             // ignore: deprecated_member_use
             color: Color(0xff4EB7F2),
           ),
         ),
+        Spacer(),
         Transform.rotate(
           angle: -3.14159,
           child: Icon(
