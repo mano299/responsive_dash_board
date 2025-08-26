@@ -11,30 +11,29 @@ class AllExpensesListView extends StatefulWidget {
 }
 
 class _AllExpensesListViewState extends State<AllExpensesListView> {
-  static const List<AllExpensesItemModel> expensesItems = [
-      AllExpensesItemModel(
-        image: Assets.imagesBalance,
-        title: 'Balance',
-        date: 'April 2022',
-        money: 20.129,
-      ),
-      AllExpensesItemModel(
-        image: Assets.imagesIncome,
-        title: 'Income',
-        date: 'April 2022',
-        money: 20.129,
-      ),
-      AllExpensesItemModel(
-        image: Assets.imagesExpenses,
-        title: 'Expenses',
-        date: 'April 2022',
-        money: 20.129,
-      ),
-    ];
-    int isSelected = 0;
+  final List<AllExpensesItemModel> expensesItems = [
+    AllExpensesItemModel(
+      image: Assets.imagesBalance,
+      title: 'Balance',
+      date: 'April 2022',
+      money: 20.129,
+    ),
+    AllExpensesItemModel(
+      image: Assets.imagesIncome,
+      title: 'Income',
+      date: 'April 2022',
+      money: 20.129,
+    ),
+    AllExpensesItemModel(
+      image: Assets.imagesExpenses,
+      title: 'Expenses',
+      date: 'April 2022',
+      money: 20.129,
+    ),
+  ];
+  int isSelected = 0;
   @override
   Widget build(BuildContext context) {
-    
     return Row(
       children: expensesItems.asMap().entries.map((e) {
         int index = e.key;
@@ -45,9 +44,11 @@ class _AllExpensesListViewState extends State<AllExpensesListView> {
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: GestureDetector(
                   onTap: () {
-                    setState(() {
-                      isSelected = index;
-                    });
+                    if (isSelected != index) {
+                      setState(() {
+                        isSelected = index;
+                      });
+                    }
                   },
                   child: AllExpensesItem(
                     itemModel: item,
@@ -59,9 +60,11 @@ class _AllExpensesListViewState extends State<AllExpensesListView> {
           return Expanded(
             child: GestureDetector(
               onTap: () {
-                setState(() {
-                  isSelected = index;
-                });
+                if (isSelected != index) {
+                  setState(() {
+                    isSelected = index;
+                  });
+                }
               },
               child: AllExpensesItem(
                 itemModel: item,
