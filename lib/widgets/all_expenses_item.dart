@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
+import 'package:responsive_dash_board/widgets/all_expenses_item_header.dart';
 
 class AllExpensesItem extends StatelessWidget {
   const AllExpensesItem({super.key});
@@ -9,28 +8,19 @@ class AllExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        color: Color(0xff4EB7F2),
-        borderRadius: BorderRadius.circular(12),
+      decoration: ShapeDecoration(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+          side: BorderSide(
+            color: Color(0xffF1F1F1),
+            width: 1,
+          ),
+        ),
+        color: Color(0xffFFFFFF),
       ),
       child: Column(
         children: [
-          Row(
-            children: [
-              CircleAvatar(
-                backgroundColor: Colors.lightBlueAccent,
-                child: SvgPicture.asset(Assets.imagesBalance),
-              ),
-              Spacer(),
-              Transform.rotate(
-                angle: -3.14159,
-                child: Icon(
-                  Icons.arrow_back_ios_new_rounded,
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
+          AllExpensesItemHeader(),
           SizedBox(height: 34),
           Text(
             'Balance',
@@ -49,3 +39,5 @@ class AllExpensesItem extends StatelessWidget {
     );
   }
 }
+
+
