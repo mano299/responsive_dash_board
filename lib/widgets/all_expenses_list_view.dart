@@ -11,9 +11,7 @@ class AllExpensesListView extends StatefulWidget {
 }
 
 class _AllExpensesListViewState extends State<AllExpensesListView> {
-  @override
-  Widget build(BuildContext context) {
-    const List<AllExpensesItemModel> expensesItems = [
+  static const List<AllExpensesItemModel> expensesItems = [
       AllExpensesItemModel(
         image: Assets.imagesBalance,
         title: 'Balance',
@@ -33,6 +31,10 @@ class _AllExpensesListViewState extends State<AllExpensesListView> {
         money: 20.129,
       ),
     ];
+    int isSelected = 0;
+  @override
+  Widget build(BuildContext context) {
+    
     return Row(
       children: expensesItems.asMap().entries.map((e) {
         int index = e.key;
@@ -41,11 +43,32 @@ class _AllExpensesListViewState extends State<AllExpensesListView> {
           return Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: AllExpensesItem(itemModel: item),
+              child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isSelected = index;
+                    });
+                  },
+                  child: AllExpensesItem(
+                    itemModel: item,
+                    isActive: isSelected == index,
+                  )),
             ),
           );
         } else {
-          return Expanded(child: AllExpensesItem(itemModel: item));
+          return Expanded(
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  isSelected = index;
+                });
+              },
+              child: AllExpensesItem(
+                itemModel: item,
+                isActive: isSelected == index,
+              ),
+            ),
+          );
         }
       }).toList(),
     );
