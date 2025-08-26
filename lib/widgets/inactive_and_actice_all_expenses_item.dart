@@ -71,7 +71,11 @@ class ActiveAllExpensesItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AllExpensesItemHeader(image: itemModel.image),
+          AllExpensesItemHeader(
+            image: itemModel.image,
+            backgroundColor: Colors.white.withOpacity(0.1),
+            imageColor: Colors.white,
+          ),
           SizedBox(height: 34),
           Text(
             itemModel.title,
