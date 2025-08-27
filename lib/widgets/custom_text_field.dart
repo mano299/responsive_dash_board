@@ -11,18 +11,8 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         filled: true,
         fillColor: Color(0xffFAFAFA),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.white,
-          ),
-          borderRadius: BorderRadius.circular(12),
-        ),
-        border: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.white,
-          ),
-          borderRadius: BorderRadius.circular(12),
-        ),
+        enabledBorder: buildBorder(),
+        border: buildBorder(),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.blueAccent,
@@ -30,8 +20,17 @@ class CustomTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
         hintText: hint,
-        hintStyle: AppStyles.styleRegular16,
+        hintStyle: AppStyles.styleRegular16.copyWith(color: Color(0xffAAAAAA)),
       ),
     );
+  }
+
+  OutlineInputBorder buildBorder() {
+    return OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.white,
+        ),
+        borderRadius: BorderRadius.circular(12),
+      );
   }
 }
