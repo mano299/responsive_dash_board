@@ -73,6 +73,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
         children: [
           AllExpensesItemHeader(
             image: itemModel.image,
+            // ignore: deprecated_member_use
             backgroundColor: Colors.white.withOpacity(0.1),
             imageColor: Colors.white,
           ),
