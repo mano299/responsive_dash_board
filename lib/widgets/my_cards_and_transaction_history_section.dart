@@ -12,6 +12,7 @@ class MyCardsAndTransactionHistorySection extends StatelessWidget {
       child: Column(
         children: [
           MyCardsSection(),
+          Divider(height: 40),
           TransactionsSection(),
         ],
       ),

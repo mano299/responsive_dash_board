@@ -39,7 +39,6 @@ class _MyCardsSectionState extends State<MyCardsSection> {
         MyCardsPageView(pageController: pageController),
         SizedBox(height: 20),
         DotsIndicator(currentIndex: currentIndex),
-        Divider(height: 40),
       ],
     );
   }
