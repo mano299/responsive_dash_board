@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
-import 'package:responsive_dash_board/widgets/custom_background_container.dart';
 import 'package:responsive_dash_board/widgets/dots_indicator.dart';
 import 'package:responsive_dash_board/widgets/my_cards_page_view.dart';
-import 'package:responsive_dash_board/widgets/transactions_section.dart';
 
 class MyCardsSection extends StatefulWidget {
   const MyCardsSection({super.key});
@@ -28,24 +26,21 @@ class _MyCardsSectionState extends State<MyCardsSection> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBackgroudContainer(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'My card',
-            style: AppStyles.styleSemiBold20,
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          MyCardsPageView(pageController: pageController),
-          SizedBox(height: 20),
-          DotsIndicator(currentIndex: currentIndex),
-          Divider(height: 40),
-          TransactionsSection()
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'My card',
+          style: AppStyles.styleSemiBold20,
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        MyCardsPageView(pageController: pageController),
+        SizedBox(height: 20),
+        DotsIndicator(currentIndex: currentIndex),
+        Divider(height: 40),
+      ],
     );
   }
 }
