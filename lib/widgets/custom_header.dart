@@ -10,7 +10,7 @@ class CustomHeader extends StatelessWidget {
       children: [
         Text(
           text,
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         Spacer(),
         Container(
@@ -29,7 +29,7 @@ class CustomHeader extends StatelessWidget {
             children: [
               Text(
                 'Monthly',
-                style: AppStyles.styleMedium16,
+                style: AppStyles.styleMedium16(context),
               ),
               SizedBox(width: 18),
               Transform.rotate(

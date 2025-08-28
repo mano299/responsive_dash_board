@@ -54,7 +54,7 @@ class QuickInvoiceForm extends StatelessWidget {
               child: Center(
                 child: Text(
                   'Add more details',
-                  style: AppStyles.styleSemiBold18
+                  style: AppStyles.styleSemiBold18(context)
                       .copyWith(color: Color(0xff4EB7F2)),
                 ),
               ),

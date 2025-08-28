@@ -20,7 +20,7 @@ class CustomTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
         hintText: hint,
-        hintStyle: AppStyles.styleRegular16.copyWith(color: Color(0xffAAAAAA)),
+        hintStyle: AppStyles.styleRegular16(context).copyWith(color: Color(0xffAAAAAA)),
       ),
     );
   }
