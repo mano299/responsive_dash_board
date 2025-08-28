@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/models/income_item_details.dart';
+import 'package:responsive_dash_board/models/income_item_details_model.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class IncomeDetailsItem extends StatelessWidget {
   const IncomeDetailsItem({super.key, required this.incomeItemDetails});
-  final IncomeItemDetails incomeItemDetails;
+  final IncomeItemDetailsModel incomeItemDetails;
   @override
   Widget build(BuildContext context) {
     return ListTile(
