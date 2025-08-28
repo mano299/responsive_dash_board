@@ -7,15 +7,13 @@ class PaymentsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          SizedBox(height: 40),
-          MyCardsAndTransactionHistorySection(),
-          SizedBox(height: 24),
-          IncomeSection()
-        ],
-      ),
+    return Column(
+      children: [
+        SizedBox(height: 40),
+        MyCardsAndTransactionHistorySection(),
+        SizedBox(height: 24),
+        IncomeSection()
+      ],
     );
   }
 }
