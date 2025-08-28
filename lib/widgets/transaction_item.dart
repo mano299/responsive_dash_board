@@ -23,7 +23,7 @@ class TransactionItem extends StatelessWidget {
           style: AppStyles.styleRegular16,
         ),
         trailing: Text(
-          '\$${transactionModel.amount}',
+          transactionModel.amount,
           style: AppStyles.styleSemiBold20.copyWith(
             color: transactionModel.isWithdraw ? Colors.red : Colors.green,
           ),
