@@ -7,12 +7,12 @@ class TransactionsHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           'Transaction History',
           style: AppStyles.styleSemiBold20,
         ),
-        Spacer(),
         TextButton(
           onPressed: () {},
           child: Text(
