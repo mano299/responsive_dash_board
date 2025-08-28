@@ -3,6 +3,7 @@ import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/custom_background_container.dart';
 import 'package:responsive_dash_board/widgets/dots_indicator.dart';
 import 'package:responsive_dash_board/widgets/my_cards_page_view.dart';
+import 'package:responsive_dash_board/widgets/transactions_section.dart';
 
 class MyCardsSection extends StatefulWidget {
   const MyCardsSection({super.key});
@@ -20,9 +21,7 @@ class _MyCardsSectionState extends State<MyCardsSection> {
     pageController = PageController();
     pageController.addListener(() {
       currentIndex = pageController.page!.round();
-      setState(() {
-        
-      });
+      setState(() {});
     });
     // TODO: implement initState
     super.initState();
@@ -44,6 +43,8 @@ class _MyCardsSectionState extends State<MyCardsSection> {
           MyCardsPageView(pageController: pageController),
           SizedBox(height: 20),
           DotsIndicator(currentIndex: currentIndex),
+          Divider(height: 40),
+          TransactionsSection()
         ],
       ),
     );
