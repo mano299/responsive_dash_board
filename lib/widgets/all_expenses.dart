@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/widgets/all_expenses_header.dart';
+import 'package:responsive_dash_board/widgets/custom_header.dart';
 import 'package:responsive_dash_board/widgets/all_expenses_list_view.dart';
 import 'package:responsive_dash_board/widgets/custom_background_container.dart';
 
@@ -11,7 +11,7 @@ class AllExpenses extends StatelessWidget {
     return CustomBackgroudContainer(
       child: Column(
         children: [
-          AllExpensesHeader(),
+          CustomHeader(text: 'AllExpenses',),
           SizedBox(height: 16),
           AllExpensesListView(),
         ],
