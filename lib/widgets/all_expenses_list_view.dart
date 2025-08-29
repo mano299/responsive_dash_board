@@ -35,26 +35,59 @@ class _AllExpensesListViewState extends State<AllExpensesListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(0);
+            },
+            child: AllExpensesItem(
+              itemModel: expensesItems[0],
+              isActive: isSelected == 0,
+            ),
+          ),
+        ),
+        SizedBox(width: 12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(1);
+            },
+            child: AllExpensesItem(
+              itemModel: expensesItems[1],
+              isActive: isSelected == 1,
+            ),
+          ),
+        ),
+        SizedBox(width: 12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(2);
+            },
+            child: AllExpensesItem(
+              itemModel: expensesItems[2],
+              isActive: isSelected == 2,
+            ),
+          ),
+        ),
+      ],
+    );
+
+    Row(
       children: expensesItems.asMap().entries.map((e) {
         int index = e.key;
         var item = e.value;
         if (index == 1) {
           return Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: GestureDetector(
-                  onTap: () {
-                    if (isSelected != index) {
-                      setState(() {
-                        isSelected = index;
-                      });
-                    }
-                  },
-                  child: AllExpensesItem(
-                    itemModel: item,
-                    isActive: isSelected == index,
-                  )),
-            ),
+            child: GestureDetector(
+                onTap: () {
+                  updateIndex(index);
+                },
+                child: AllExpensesItem(
+                  itemModel: item,
+                  isActive: isSelected == index,
+                )),
           );
         } else {
           return Expanded(
@@ -75,5 +108,13 @@ class _AllExpensesListViewState extends State<AllExpensesListView> {
         }
       }).toList(),
     );
+  }
+
+  void updateIndex(int index) {
+    if (isSelected != index) {
+      setState(() {
+        isSelected = index;
+      });
+    }
   }
 }

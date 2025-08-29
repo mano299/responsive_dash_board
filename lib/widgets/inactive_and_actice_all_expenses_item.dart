@@ -64,6 +64,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(
+          side: BorderSide(width: 1, color: Color(0xff4EB7F2)),
           borderRadius: BorderRadius.circular(12),
         ),
         color: Color(0xff4EB7F2),
