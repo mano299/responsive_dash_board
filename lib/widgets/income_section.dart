@@ -12,6 +12,7 @@ class IncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // log("${MediaQuery.sizeOf(context).width}");
     return CustomBackgroudContainer(
       child: Column(
         children: [

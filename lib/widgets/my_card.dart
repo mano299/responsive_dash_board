@@ -24,11 +24,11 @@ class MyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              contentPadding:
-                  EdgeInsets.only(right: 32, top: 16, left: 31),
+              contentPadding: EdgeInsets.only(right: 32, top: 16, left: 31),
               title: Text(
                 'Name card',
-                style: AppStyles.styleRegular16(context).copyWith(color: Colors.white),
+                style: AppStyles.styleRegular16(context)
+                    .copyWith(color: Colors.white),
               ),
               subtitle: Text(
                 'Syah Bandi',
@@ -49,12 +49,13 @@ class MyCard extends StatelessWidget {
                   SizedBox(height: 12),
                   Text(
                     '12/20 - 124',
-                    style:
-                        AppStyles.styleRegular16(context).copyWith(color: Colors.white),
+                    style: AppStyles.styleRegular16(context)
+                        .copyWith(color: Colors.white),
                   ),
                 ],
               ),
-            )
+            ),
+            Flexible(child: SizedBox(height: 54 - 28)),
           ],
         ),
       ),
